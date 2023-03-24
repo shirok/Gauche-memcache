@@ -21,7 +21,7 @@ while [ $# -gt 0 ]; do
 done
 
 if [ "$gen" = "yes" ]; then
-  autoconf
+# no longer need to run autoconf
 fi
 
 if [ "$tgz" = "yes" ]; then
@@ -64,11 +64,11 @@ if [ "$pub" = "yes" ]; then
   $MAKE -C gauche-memcache clean all
   if [ "$?" != "0" ]; then exit 2; fi
   for x in \
-	  ../$MODULE-$VERSION.tgz \
-	  ../$MODULE-$VERSION/doc/reference.ja.html \
-	  ../$MODULE-$VERSION/doc/reference.en.html \
-	  gauche-memcache/index.html \
-	  gauche-memcache/index.en.html; do
-	cp -pf $x /home/htdocs/gauche-memcache/
+          ../$MODULE-$VERSION.tgz \
+          ../$MODULE-$VERSION/doc/reference.ja.html \
+          ../$MODULE-$VERSION/doc/reference.en.html \
+          gauche-memcache/index.html \
+          gauche-memcache/index.en.html; do
+        cp -pf $x /home/htdocs/gauche-memcache/
   done
 fi
