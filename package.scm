@@ -8,7 +8,7 @@
   :repository "https://github.com/tabe/Gauche-memcache.git"
 
   ;;
-  :version "0.1"
+  :version "0.1.1"
 
   ;; Description of the package.  The first line is used as a short
   ;; summary.
